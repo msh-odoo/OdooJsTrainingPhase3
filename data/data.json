@@ -1,0 +1,88 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "/static/images/item-1.jpeg",
+            "product_price": "$145.00",
+            "product_category": 2
+        },
+        {
+            "id": 2,
+            "produt_name": "Women's Minam Meaghan",
+            "product_image": "/static/images/item-2.jpeg",
+            "product_price": "$139.00",
+            "product_category": 2
+        },
+        {
+            "id": 3,
+            "produt_name": "Men's Taja Commissioner",
+            "product_image": "/static/images/item-3.jpeg",
+            "product_price": "",
+            "product_category": 3
+        },
+        {
+            "id": 4,
+            "produt_name": "Russ Men's Sneakers",
+            "product_image": "static/images/item-4.jpeg",
+            "product_price": "$149.00",
+            "product_category": 3
+        },
+        {
+            "id": 5,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "static/images/item-5.jpeg",
+            "product_price": "$129.00",
+            "product_category": 2
+        },
+        {
+            "id": 6,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "static/images/item-6.jpeg",
+            "product_price": "$159.00",
+            "product_category": 2
+        },
+        {
+            "id": 7,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "static/images/item-7.jpeg",
+            "product_price": "$169.00",
+            "product_category": 2
+        },
+        {
+            "id": 8,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "static/images/item-8.jpeg",
+            "product_price": "$179.00",
+            "product_category": 2
+        },
+        {
+            "id": 9,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "static/images/item-9.jpeg",
+            "product_price": "$189.00",
+            "product_category": 2
+        },
+        {
+            "id": 10,
+            "produt_name": "Women's Boots Shoes Maca",
+            "product_image": "static/images/item-10.jpeg",
+            "product_price": "$199.00",
+            "product_category": 2
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Footwear"
+        },
+        {
+            "id": 2,
+            "name": "Ladies Footwear"
+        },
+        {
+            "id": 3,
+            "name": "Gents Footwear"
+        }
+    ]
+}

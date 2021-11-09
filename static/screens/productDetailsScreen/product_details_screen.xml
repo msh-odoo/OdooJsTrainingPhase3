@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="productDetailsScreen">
+        <div>
+            <div class="o_header"></div>
+            <div class="o_content">
+                <button class="o_back_to_shop btn nav-link mr-4">
+                    <i class="fa fa-chevron-left"></i> Back
+                </button>
+            </div>
+            <div class="o_footer"></div>
+        </div>
+    </t>
+</templates>

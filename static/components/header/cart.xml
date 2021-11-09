@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="HeaderCart">
+        <a role="button" id="cart_popover" class="btn btn-primary btn-lg js_check_product a-submit my-1 mr-1 px-5 font-weight-bold flex-grow-1" href="#"><i class="fa fa-shopping-cart mr-2"></i></a>
+    </t>
+</templates>

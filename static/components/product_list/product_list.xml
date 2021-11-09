@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="Content">
+        <div class="o_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
+						<h2>Best Sellers</h2>
+					</div>
+				</div>
+				<div class="row row-pb-md">
+                    <t t-set="count" t-value="0"/>
+					<div class="col-lg-3 mb-4 text-center" t-foreach="widget.products" t-as="product">
+                        <t t-set="count" t-value="count+1"/>
+						<div t-att-data-product-id="product.id"></div>
+					</div>
+					<div t-if="count % 4 == 0" class="w-100"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p><a href="#" class="btn btn-primary btn-lg">Show More Products</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </t>
+</templates>

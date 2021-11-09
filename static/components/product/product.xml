@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="Product">
+        <div class="product-entry border" t-att-data-id="widget.product.id">
+            <a href="#" class="prod-img">
+                <img t-att-src="widget.product.product_image" class="img-fluid" alt="Product Image" />
+            </a>
+            <div class="desc">
+                <h2><a href="#"><t t-esc="widget.product.produt_name"></t></a></h2>
+                <span class="price"><t t-esc="widget.product.product_price"/></span>
+            </div>
+        </div>
+    </t>
+</templates>

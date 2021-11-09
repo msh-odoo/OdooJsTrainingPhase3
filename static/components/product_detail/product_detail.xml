@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="ProductDetails">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 mt-md-4">
+                    <div id="o-carousel-product" class="carousel slide position-sticky mb-3 overflow-hidden" data-ride="carousel" data-interval="0" style="top: 5px;">
+                        <div class="o_carousel_product_outer carousel-outer position-relative flex-grow-1">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item h-100 active" style="min-height: 400px;">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <img t-att-src="widget.product.product_image" itemprop="image" class="img img-fluid product_detail_img mh-100" t-att-alt="widget.product.produt_name" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_carousel_product_indicators pr-1 overflow-hidden"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-md-4" id="product_details">
+                    <h1><t t-esc="widget.product.produt_name"/></h1>
+                    <form action="/update_cart" method="POST">
+                        <div class="js_product js_main_product mb-3">
+                            <div>
+                                <div class="product_price d-inline-block mt-2 mb-3">
+                                    <h3 class="css_editable_mode_hidden">
+                                        <span data-oe-type="monetary" class="oe_price" style="white-space: nowrap;"><span class="oe_currency_value"><t t-esc="widget.product.product_price"/></span></span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <input type="hidden" class="product_id" name="product_id" value="widget.product.id" title="" />
+                            <div class="css_quantity input-group d-inline-flex mr-2 my-1 align-middle" contenteditable="false">
+                                <div class="input-group-prepend">
+                                    <a class="btn btn-primary js_add_cart_json" aria-label="Remove one" title="Remove one" href="#">
+                                        <i class="fa fa-minus"></i>
+                                    </a>
+                                </div>
+                                <input type="text" class="form-control quantity" data-min="1" name="add_qty" value="1" title="" />
+                                <div class="input-group-append">
+                                    <a class="btn btn-primary float_left js_add_cart_json" aria-label="Add one" title="Add one" href="#">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="add_to_cart_wrap" class="d-inline">
+                                <a role="button" id="add_to_cart" class="btn btn-primary btn-lg js_check_product a-submit my-1 mr-1 px-5 font-weight-bold flex-grow-1" href="#"><i class="fa fa-shopping-cart mr-2"></i>ADD TO CART</a>
+                                <div id="product_option_block" class="d-inline-block align-middle">
+                                    <button type="button" role="button" class="btn btn-outline-primary border-0 my-1 px-2 o_add_wishlist_dyn" data-action="o_wishlist" title="Add to wishlist"><i class="fa fa-heart-o fa-2x" role="img" aria-label="Add to wishlist"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
