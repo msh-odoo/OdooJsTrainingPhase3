@@ -1,8 +1,9 @@
 import { rpc } from "../core/rpc.js";
 import { registry } from "../core/registry.js";
+import { actions } from "../store/actions.js";
 
-const { Component, mount } = owl;
-const { useState } = owl.hooks;
+const { Component, Store, mount } = owl;
+const { useState, useDispatch, useStore } = owl.hooks;
 const { whenReady } = owl.utils;
 
 // TODO: MSH: Add unit tests, maybe use Qunit/jest/mocha test runner lib for testing
@@ -42,8 +43,10 @@ screenRegistry.getEntries().forEach((comp) => {
 
 const setup = async () => {
     let templates = await rpc("/load-qweb", {});
+    const store = new Store({ actions, state: { products: [] } });
     const env = {
-        qweb: new owl.QWeb()
+        qweb: new owl.QWeb(),
+        store,
     };
     env.qweb.addTemplates(templates);
     mount(App, { env, target: document.body });

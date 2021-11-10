@@ -2,10 +2,19 @@ import { Cart } from "./cart.js";
 import { rpc } from "../../core/rpc.js";
 
 const { Component } = owl;
+const { useRef } = owl.hooks;
 
 // TODO: MSH: manage current cart details in localstorage or maybe in session(session would be better)
 
 export class Header extends Component {
+    constructor(parent, props) {
+        super(...arguments);
+        this.searchInputRef = useRef('search-input');
+    }
+
+    mounted() {
+        this.searchInputRef.el.focus();
+    }
 
     //--------------------------------------------------------------------------
     // Handlers
