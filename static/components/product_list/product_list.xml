@@ -10,9 +10,9 @@
 				</div>
 				<div class="row row-pb-md">
                     <t t-set="count" t-value="0"/>
-					<div class="col-lg-3 mb-4 text-center" t-foreach="widget.products" t-as="product">
+					<div class="col-lg-3 mb-4 text-center" t-foreach="products" t-as="product">
                         <t t-set="count" t-value="count+1"/>
-						<div t-att-data-product-id="product.id"></div>
+						<Product product="product"/>
 					</div>
 					<div t-if="count % 4 == 0" class="w-100"></div>
 				</div>

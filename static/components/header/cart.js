@@ -1,6 +1,6 @@
-import { BaseComponent } from "../base_component.js";
+const { Component } = owl;
 
-export class Cart extends BaseComponent {
+export class Cart extends Component {
 
 }
 Cart.template = "HeaderCart";

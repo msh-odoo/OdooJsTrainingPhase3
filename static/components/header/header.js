@@ -1,15 +1,11 @@
-import { BaseComponent } from "../base_component.js";
 import { Cart } from "./cart.js";
 import { rpc } from "../../core/rpc.js";
 
-export class Header extends BaseComponent {
+const { Component } = owl;
 
-    async mount(target) {
-        await super.mount(...arguments);
-        // TODO: MSH: manage current cart details in localstorage or maybe in session(session would be better)
-        const cart = new Cart(this);
-        await cart.mount(this.el);
-    }
+// TODO: MSH: manage current cart details in localstorage or maybe in session(session would be better)
+
+export class Header extends Component {
 
     //--------------------------------------------------------------------------
     // Handlers
@@ -27,6 +23,4 @@ export class Header extends BaseComponent {
 }
 
 Header.template = "Header";
-Header.events = {
-    'click .o_search_btn': '_onSearch'
-};
+Header.components = { Cart };

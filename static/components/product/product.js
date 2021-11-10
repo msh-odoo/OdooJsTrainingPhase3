@@ -1,9 +1,10 @@
-import { BaseComponent } from "../base_component.js";
 
-export class Product extends BaseComponent {
-    constructor(parent, options) {
+const { Component } = owl;
+
+export class Product extends Component {
+    constructor(parent, props) {
         super(...arguments);
-        this.product = options.product;
+        this.product = props.product;
     }
 
     //--------------------------------------------------------------------------
@@ -20,6 +21,3 @@ export class Product extends BaseComponent {
     }
 }
 Product.template = "Product";
-Product.events = {
-    'click': 'onClickProduct',
-};

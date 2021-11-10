@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="App">
-        <div class="o_main"></div>
+        <div class="o_main" t-on-change-screen="_onChangeScreen" t-on-update-screen="_onUpdateScreen">
+            <t t-if="state.currentScreen === 'shop'">
+                <Shop/>
+            </t>
+            <t t-elif="state.currentScreen === 'product_details'">
+                <ProductDetailsScreen params="state.params"/>
+            </t>
+        </div>
     </t>
 </templates>

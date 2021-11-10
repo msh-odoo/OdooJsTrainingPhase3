@@ -67,6 +67,33 @@ export class Registry {
     }
 
     /**
+     * Get a list of all elements in the registry. Note that it is ordered
+     * according to the sequence numbers.
+     *
+     * @returns {any[]}
+     */
+    getAll() {
+        if (!this.elements) {
+            const content = Object.values(this.content).sort((el1, el2) => el1[0] - el2[0]);
+            this.elements = content.map((elem) => elem[1]);
+        }
+        return this.elements;
+    }
+
+    /**
+     * Return a list of all entries, ordered by sequence numbers.
+     *
+     * @returns {[string, any][]}
+     */
+    getEntries() {
+        if (!this.entries) {
+            const entries = Object.entries(this.content).sort((el1, el2) => el1[1][0] - el2[1][0]);
+            this.entries = entries.map(([str, elem]) => [str, elem[1]]);
+        }
+        return this.entries;
+    }
+
+    /**
      * Check the presence of a key in the registry
      *
      * @param {string} key

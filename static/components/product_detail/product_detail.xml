@@ -9,7 +9,7 @@
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item h-100 active" style="min-height: 400px;">
                                     <div class="d-flex align-items-center justify-content-center h-100">
-                                        <img t-att-src="widget.product.product_image" itemprop="image" class="img img-fluid product_detail_img mh-100" t-att-alt="widget.product.produt_name" loading="lazy" />
+                                        <img t-att-src="product.product_image" itemprop="image" class="img img-fluid product_detail_img mh-100" t-att-alt="product.produt_name" loading="lazy" />
                                     </div>
                                 </div>
                             </div>
@@ -18,17 +18,17 @@
                     </div>
                 </div>
                 <div class="col-md-6 mt-md-4" id="product_details">
-                    <h1><t t-esc="widget.product.produt_name"/></h1>
+                    <h1><t t-esc="product.produt_name"/></h1>
                     <form action="/update_cart" method="POST">
                         <div class="js_product js_main_product mb-3">
                             <div>
                                 <div class="product_price d-inline-block mt-2 mb-3">
                                     <h3 class="css_editable_mode_hidden">
-                                        <span data-oe-type="monetary" class="oe_price" style="white-space: nowrap;"><span class="oe_currency_value"><t t-esc="widget.product.product_price"/></span></span>
+                                        <span data-oe-type="monetary" class="oe_price" style="white-space: nowrap;"><span class="oe_currency_value"><t t-esc="product.product_price"/></span></span>
                                     </h3>
                                 </div>
                             </div>
-                            <input type="hidden" class="product_id" name="product_id" value="widget.product.id" title="" />
+                            <input type="hidden" class="product_id" name="product_id" value="product.id" title="" />
                             <div class="css_quantity input-group d-inline-flex mr-2 my-1 align-middle" contenteditable="false">
                                 <div class="input-group-prepend">
                                     <a class="btn btn-primary js_add_cart_json" aria-label="Remove one" title="Remove one" href="#">

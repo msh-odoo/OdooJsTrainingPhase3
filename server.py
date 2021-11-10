@@ -69,13 +69,14 @@ class Application:
 
         files = [
             "static/app/app.xml",
-            # "static/js/components/header/header.xml",
-            # "static/js/components/header/cart.xml",
-            # "static/js/components/product_list/product_list.xml",
-            # "static/js/components/footer/footer.xml",
-            # "static/js/components/product/product.xml",
-            # "static/js/components/product_detail/product_detail.xml",
-            # "static/js/screens/productDetailsScreen/product_details_screen.xml",
+            "static/components/header/header.xml",
+            "static/components/header/cart.xml",
+            "static/components/product_list/product_list.xml",
+            "static/components/footer/footer.xml",
+            "static/components/product/product.xml",
+            "static/components/product_detail/product_detail.xml",
+            "static/screens/shopScreen/shop_screen.xml",
+            "static/screens/productDetailsScreen/product_details_screen.xml",
         ]
         concatedXml = self._concat_xml(files)
         concatedXml = concatedXml.decode("utf-8")
